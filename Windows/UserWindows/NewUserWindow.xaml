@@ -1,0 +1,29 @@
+﻿<Window x:Class="Kurs2.NewUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kurs2"
+        mc:Ignorable="d"
+        Title="Новый пользователь" Height="300" Width="370" Loaded="Window_Loaded" Style="{StaticResource DefaultWindowStyle}" WindowStartupLocation="CenterScreen">
+    <Grid>
+
+        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="НОВ"/><Run Language="ru-ru" Text="ЫЙ ПОЛЬЗОВАТЕЛЬ"/></TextBlock>
+
+
+        <TextBlock HorizontalAlignment="Left" Margin="16,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="18"><Run Language="ru-ru" Text="Имя пользователя:"/></TextBlock>
+        <TextBox x:Name="TbLogin" HorizontalAlignment="Left" Margin="16,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="329" Height="20"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="16,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="18"><Run Language="ru-ru" Text="Роль"/><Run Text=":"/><LineBreak/><Run/></TextBlock>
+        <ComboBox x:Name="RoleList" HorizontalAlignment="Left" Margin="16,120,0,0" VerticalAlignment="Top" Width="162" SelectedIndex="1" >
+            <ComboBoxItem Content="Администратор"/>
+            <ComboBoxItem Content="Кассир"/>
+            <ComboBoxItem Content="Менеджер по закупке"/>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="16,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="18"><Run Language="ru-ru" Text="Пароль:"/></TextBlock>
+        <PasswordBox x:Name="TbPassword" HorizontalAlignment="Left" Margin="16,175,0,0" VerticalAlignment="Top" Width="327" Height="20"/>
+
+        <Button Content="Сохранить" HorizontalAlignment="Left" Margin="248,224,0,0" VerticalAlignment="Top" Width="95" Click="Button_Save" />
+        <Button Content="Отмена" HorizontalAlignment="Left" Margin="148,224,0,0" VerticalAlignment="Top" Width="95" Click="Button_clkClose"/>
+    </Grid>
+</Window>
